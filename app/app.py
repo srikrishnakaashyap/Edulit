@@ -1,4 +1,4 @@
-
+from flask_socketio import SocketIO
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
@@ -17,6 +17,8 @@ with app.app_context():
 
   cors = CORS(app)
   RegisterBlueprints(app, db)
-  app.run(host="0.0.0.0", port=5000)
+  socketio = SocketIO(app, cors_allowed_origins='*')
+  import sockets.join_room
+  socketio.run(app, host="0.0.0.0", port=5000, debug=True)
 
 
