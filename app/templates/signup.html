@@ -31,13 +31,25 @@
       <!-- form here!!! -->
       <form action="#">
         <div>
-          <label for="username"> Username </label>
+          <label for="firstname"> First Name </label>
           <input 
           type="text"
-          name ="username"
+          name ="firstname"
           autocomplete="off"
           value=""
-          placeholder="Enter your email"
+          placeholder="Enter your first name"
+          class="input-firstname"
+          />
+          
+        </div>
+        <div>
+          <label for="lastname"> Last Name </label>
+          <input 
+          type="text"
+          name ="lastname"
+          autocomplete="off"
+          value=""
+          placeholder="Enter your last name"
           class="input-email"
           />
           
@@ -53,6 +65,27 @@
           class="input-password"
           />
           
+        </div>
+        <div>
+          <label for="email"> Email Address </label>
+          <input 
+          type="text"
+          name ="username"
+          autocomplete="off"
+          value=""
+          placeholder="Enter your email"
+          class="input-email"
+          />
+          
+        </div>
+        <div>
+          <label for="roles">Choose a role:</label>
+
+          <select id="roles" name="roles">
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+          </select>
+          <input type="submit" value="Submit">
         </div>
         <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="button">
           <span class="MuiButton-label">

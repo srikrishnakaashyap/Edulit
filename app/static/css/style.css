@@ -216,7 +216,7 @@ body, html {
   height: 100%;
   width: 100%;
   margin: 0;
-  /* padding: 2.5em; */
+  padding: 2.5em;
   background-color: #232741;
 }
 
@@ -322,9 +322,7 @@ p {
   -webkit-backdrop-filter: blur(1px);
   position: absolute;
   display: flex;
-  width: 30vw;
-  height: 75vh;
-  min-height: 80vh;
+  
   border-radius: 20px;
   /* background-color: #ffffff; */
   background-color: #1a1d1e;
