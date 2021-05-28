@@ -1,0 +1,473 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+	background:#232741;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #232741;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: rgba(148, 29, 29, 0.04);
+}
+form>div .login_btn__2G3B- {
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 1px;
+  line-height: 1;
+  background-color: #2028eb;
+  border-color: #2028eb;
+  cursor: pointer;
+  width: 100%;
+  padding: 1.5rem;
+  transition: all .5s ease;
+}
+.MuiButton-root {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: default;
+  font: 400 13.3333px Arial;
+}
+* {
+  box-sizing: border-box;
+}
+.login_root__3aXCB {
+  overflow: hidden;
+  position: relative;
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 14px;
+  color: #bebebe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #232741;
+}
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.root {
+  overflow: hidden;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #bebebe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /* padding: 2.5em; */
+  background-color: #232741;
+}
+
+h1 {
+  font-size: 3em;
+  /* color: #131125; */
+  color: rgb(237, 232, 227);
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  line-height: 180%;
+}
+
+.login-box {
+  /* background: #e0e0e0; */
+  opacity: 0.85;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  position: absolute;
+  display: flex;
+  width: 80vw;
+  height: 75vh;
+  min-height: 80vh;
+  border-radius: 20px;
+  /* background-color: #ffffff; */
+  background-color: #1a1d1e;
+  background-color: rgb(23, 25, 26);
+
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 20px 20px 60px #232741, -20px -20px 60px #232741; */
+}
+
+.login-box-formbox,
+.login-box-quotebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 100%;
+  padding: 4em 6em;
+}
+
+@media only screen and (max-width: 1100px) {
+  .login-box-quotebox {
+    display: none;
+  }
+}
+
+.login-box-quotebox {
+  color: white;
+  background-color: #2028eb;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="%235257f0" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 17.6l-2 -1.1v-2.5"></path><path d="M4 10v-2.5l2 -1.1"></path><path d="M10 4.1l2 -1.1l2 1.1"></path><path d="M18 6.4l2 1.1v2.5"></path><path d="M20 14v2.5l-2 1.12"></path><path d="M14 19.9l-2 1.1l-2 -1.1"></path><line x1="12" y1="12" x2="14" y2="10.9"></line><line x1="18" y1="8.6" x2="20" y2="7.5"></line><line x1="12" y1="12" x2="12" y2="14.5"></line><line x1="12" y1="18.5" x2="12" y2="21"></line><path d="M12 12l-2 -1.12"></path><line x1="6" y1="8.6" x2="4" y2="7.5"></line></svg>'),
+    linear-gradient(
+      to right top,
+      #0f1396,
+      #202199,
+      #2d2d9c,
+      #38389f,
+      #4243a1,
+      #4243a1,
+      #4142a0,
+      #4142a0,
+      #36379d,
+      #2b2b99,
+      #1d1e95,
+      #0a0f90
+    );
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.login-box-signup a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  text-decoration: inherit;
+}
+.login-box-signup a:hover,
+.login-box-signup a:focus {
+  color: #a0a4e3;
+}
+
+.login-box-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-grow: 1;
+}
+.login-box-login > * {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+form > div {
+  position: relative;
+  padding: 1.5em 0;
+}
+form > div input {
+  color: #bebebe;
+  background-color: #17191a;
+  width: 100%;
+  padding: 1em 2em;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+}
+form > div input.input-email,
+form > div input.input-password {
+  background-repeat: no-repeat;
+  background-position: right 1em top 1em;
+}
+form > div input.input-email {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="lightgrey" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="4"></circle><path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path></svg>');
+}
+form > div input.input-password {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="lightgrey" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="5" y="11" width="14" height="10" rx="2"></rect><circle cx="12" cy="16" r="1"></circle><path d="M8 11v-4a4 4 0 0 1 8 0v4"></path></svg>');
+}
+form > div input:focus {
+  outline: whitesmoke;
+  border-color: whitesmoke;
+  font-weight: bold;
+}
+form > div label {
+  font-size: 0.85em;
+  position: absolute;
+  top: 1.25em;
+  left: 1.5em;
+  /* background: #ffffff; */
+  background: #17191a;
+
+  padding: 0 0.5em;
+}
+form > div:focus-within label {
+  color: white;
+  font-weight: 600;
+}
+form > div .btn {
+  color: #ffffff;
+  font-size: 1em;
+  letter-spacing: 1px;
+  line-height: 1;
+  background-color: #2028eb;
+  border-color: #2028eb;
+  cursor: pointer;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+form > div .btn:hover,
+form > div .btn:focus {
+  background-color: #0f1396;
+  border-color: #0f1396;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.alternate-text {
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0;
+  text-align: center;
+}
+.alternate-text::before,
+.alternate-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgb(73, 79, 83);
+}
+.alternate-text::before {
+  margin-right: 1em;
+}
+.alternate-text::after {
+  margin-left: 1em;
+}
+
+.alternate-boxes {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.alternate-box {
+  background-color: transparent;
+  color: #131125;
+  text-align: center;
+  width: 100%;
+  padding: 1em 1em;
+  border: 1px solid rgba(190, 190, 190, 0.5) !important;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.75rem !important;
+  transition: all 500ms ease;
+}
+.alternate-box img {
+  transition: transform 500ms ease;
+}
+.alternate-box:hover {
+  border-color: #bebebe;
+  background-color: rgba(190, 190, 190, 0.25);
+}
+.alternate-box:hover img {
+  transform: scale(1.25);
+}
+
+.quote-container {
+  padding: 1em 0;
+  position: relative;
+}
+.quote-container::before {
+  content: '';
+  position: absolute;
+  top: -4.5em;
+  left: -0.65em;
+  width: 3.5em;
+  height: 3.5em;
+  background-color: #93f8e0;
+  border-radius: 100%;
+}
+.quote-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 100%;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.quote {
+  color: #ffffff;
+  font-size: 7em;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.quote-small {
+  color: #ebeef7;
+  line-height: 180%;
+  padding: 2em 0 0 6em;
+  position: relative;
+}
+.quote-small::before {
+  content: '';
+  position: absolute;
+  top: 2.75em;
+  left: 1.2em;
+  width: 3em;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
