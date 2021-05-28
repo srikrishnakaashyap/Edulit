@@ -12,7 +12,8 @@ def login():
 
     email = request.form.get('email', None)
     password = request.form.get('password', None)
-    remember = request.form.get('remember', False)
+    remember = bool(request.form.get('remember', False))
+
     user = User.query.filter(User.email == email ).first()
     if not user:
       return redirect(url_for("signup.signup"))
