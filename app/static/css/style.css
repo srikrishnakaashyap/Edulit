@@ -313,6 +313,91 @@ p {
   flex-shrink: 0;
 }
 
+/* Sign up */
+
+.signup-box {
+  /* background: #e0e0e0; */
+  opacity: 0.85;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  position: absolute;
+  display: flex;
+  width: 80vw;
+  height: 75vh;
+  min-height: 80vh;
+  border-radius: 20px;
+  /* background-color: #ffffff; */
+  background-color: #1a1d1e;
+  background-color: rgb(23, 25, 26);
+
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 20px 20px 60px #232741, -20px -20px 60px #232741; */
+}
+
+.signup-box-formbox,
+.signup-box-quotebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 100%;
+  padding: 4em 6em;
+}
+
+@media only screen and (max-width: 1100px) {
+  .signup-box-quotebox {
+    display: none;
+  }
+}
+
+.signup-box-quotebox {
+  color: white;
+  background-color: #2028eb;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="%235257f0" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 17.6l-2 -1.1v-2.5"></path><path d="M4 10v-2.5l2 -1.1"></path><path d="M10 4.1l2 -1.1l2 1.1"></path><path d="M18 6.4l2 1.1v2.5"></path><path d="M20 14v2.5l-2 1.12"></path><path d="M14 19.9l-2 1.1l-2 -1.1"></path><line x1="12" y1="12" x2="14" y2="10.9"></line><line x1="18" y1="8.6" x2="20" y2="7.5"></line><line x1="12" y1="12" x2="12" y2="14.5"></line><line x1="12" y1="18.5" x2="12" y2="21"></line><path d="M12 12l-2 -1.12"></path><line x1="6" y1="8.6" x2="4" y2="7.5"></line></svg>'),
+    linear-gradient(
+      to right top,
+      #0f1396,
+      #202199,
+      #2d2d9c,
+      #38389f,
+      #4243a1,
+      #4243a1,
+      #4142a0,
+      #4142a0,
+      #36379d,
+      #2b2b99,
+      #1d1e95,
+      #0a0f90
+    );
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.signup-box-signup a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  text-decoration: inherit;
+}
+.signup-box-signup a:hover,
+.signup-box-signup a:focus {
+  color: #a0a4e3;
+}
+
+.signup-box-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-grow: 1;
+}
+.signup-box-login > * {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* End Signup */
+
 form > div {
   position: relative;
   padding: 1.5em 0;
