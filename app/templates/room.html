@@ -19,13 +19,17 @@
 <script>
 
     const socket = io.connect("http://0.0.0.0:5000");
-    console.log("TESTING")
-
     socket.on('connect', () => {
         socket.emit('join_room', {
             username: "{{ username }}",
             room: "{{ room }}"
         })
+    })
+
+    socket.on('join_room_announcement', function(data){
+
+        console.log(data)
+
     })
 
 </script>
