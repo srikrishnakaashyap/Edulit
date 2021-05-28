@@ -1,7 +1,6 @@
 import cv2, torch
 import time, os
 import mediapipe as mp 
-from model import Model 
 import numpy as np
 from detectActions import *
 
@@ -76,12 +75,8 @@ def detectAction(landmark_list,hand_landmarks,image_shape):
     return "dont_know"
 
 
-## Loading torch model
-model = Model()
-model.load_state_dict(torch.load(model_path, map_location='cpu'))
-model.eval()
 
-action_map = {0:'Draw', 1:'Erase', 2:'None'}
+# action_map = {0:'Draw', 1:'Erase', 2:'None'}
 
 ## cv2 text parameters
 font = cv2.FONT_HERSHEY_SIMPLEX
