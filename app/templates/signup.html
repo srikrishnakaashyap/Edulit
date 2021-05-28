@@ -32,12 +32,12 @@
           </p>
           <br>
       <!-- form here!!! -->
-      <form action="#">
+      <form id="signup" action="/signup" method="POST">
         <div>
-          <label for="firstname"> First Name </label>
+          <label for="first_name"> First Name </label>
           <input 
           type="text"
-          name ="firstname"
+          name ="first_name"
           autocomplete="off"
           value=""
           placeholder="Enter your first name"
@@ -46,10 +46,10 @@
           
         </div>
         <div>
-          <label for="lastname"> Last Name </label>
+          <label for="last_name"> Last Name </label>
           <input 
           type="text"
-          name ="lastname"
+          name ="last_name"
           autocomplete="off"
           value=""
           placeholder="Enter your last name"
@@ -57,6 +57,19 @@
           />
           
         </div>
+
+        <div>
+          <label for="email"> Email Address </label>
+          <input
+          type="text"
+          name ="email"
+          autocomplete="off"
+          value=""
+          placeholder="Enter your email"
+          class="input-email"
+          />
+        </div>
+
         <div>
           <label for="password"> Password </label>
           <input 
@@ -69,27 +82,15 @@
           />
           
         </div>
-        <div>
-          <label for="email"> Email Address </label>
-          <input 
-          type="text"
-          name ="username"
-          autocomplete="off"
-          value=""
-          placeholder="Enter your email"
-          class="input-email"
-          />
-          
-        </div>
+
         <div>
           <p>Please select a role:</p>
-              <select class="form-control" id="roles">
-                <option>Teacher</option>
-                <option>Student</option>
+              <select name="role" class="form-control" id="role">
+                <option value="6" >Teacher</option>
+                <option value="10" >Student</option>
               </select>
-          
         </div>
-        <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="button">
+        <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="submit">
           <span class="MuiButton-label">
             Register</span>
             <span class="MuiTouchRipple-root"></span></button></div>
@@ -107,6 +108,13 @@
 <!-- scripts -->
 <script src="../static/js/particles.min.js"></script>
 <script src="../static/js/app.js"></script>
+
+<script>
+
+    if({{ message }} ){
+        alert({{ message }})
+    }
+</script>
 
 
 
