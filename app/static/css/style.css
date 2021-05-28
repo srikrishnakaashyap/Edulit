@@ -322,7 +322,7 @@ p {
   -webkit-backdrop-filter: blur(1px);
   position: absolute;
   display: flex;
-  width: 80vw;
+  width: 30vw;
   height: 75vh;
   min-height: 80vh;
   border-radius: 20px;
