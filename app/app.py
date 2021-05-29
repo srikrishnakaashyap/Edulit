@@ -1,3 +1,5 @@
+import os
+
 from flask_login import LoginManager
 from flask import Flask
 from flask_socketio import SocketIO
@@ -36,6 +38,8 @@ with app.app_context():
   # socketio.init_app()
   import sockets.join_room
   import sockets.send_message
-  socketio.run(app, host="0.0.0.0", port=8080, debug=True)
+
+  port = int(os.environ.get("PORT", 5000))
+  socketio.run(app, host="0.0.0.0", port=port, debug=True)
 
 
