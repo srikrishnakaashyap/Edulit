@@ -11,9 +11,7 @@ video_feed_blueprint = Blueprint('video_feed', __name__, template_folder="templa
 def video_feed_home():
 
   print("INSIDE VIDEO FEED")
-
-
-  return render_template("index.html")
+  return render_template("room.html")
 
 
 @video_feed_blueprint.route('/video_feed')

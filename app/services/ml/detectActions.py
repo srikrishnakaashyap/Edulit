@@ -46,41 +46,41 @@ def isDrawing(hand_landmarks,image_shape):
 
     return thumb_tip_x > index_finger_MCP_x
 
-def landmark_extract(hand_lms, mpHands):
+# def landmark_extract(hand_lms, mpHands):
 
-    output_lms = []
+    # output_lms = []
 
-    lm_list = [
-    mpHands.HandLandmark.WRIST, 
-    mpHands.HandLandmark.THUMB_CMC, 
-    mpHands.HandLandmark.THUMB_MCP,
-    mpHands.HandLandmark.THUMB_IP, 
-    mpHands.HandLandmark.THUMB_TIP, 
-    mpHands.HandLandmark.INDEX_FINGER_MCP,
-    mpHands.HandLandmark.INDEX_FINGER_DIP, 
-    mpHands.HandLandmark.INDEX_FINGER_PIP, 
-    mpHands.HandLandmark.INDEX_FINGER_TIP,
-    mpHands.HandLandmark.MIDDLE_FINGER_MCP,
-    mpHands.HandLandmark.MIDDLE_FINGER_DIP, 
-    mpHands.HandLandmark.MIDDLE_FINGER_PIP, 
-    mpHands.HandLandmark.MIDDLE_FINGER_TIP, 
-    mpHands.HandLandmark.RING_FINGER_MCP, 
-    mpHands.HandLandmark.RING_FINGER_DIP,
-    mpHands.HandLandmark.RING_FINGER_PIP, 
-    mpHands.HandLandmark.RING_FINGER_TIP, 
-    mpHands.HandLandmark.PINKY_MCP,
-    mpHands.HandLandmark.PINKY_DIP, 
-    mpHands.HandLandmark.PINKY_PIP, 
-    mpHands.HandLandmark.PINKY_TIP
-    ]
+    # lm_list = [
+    # mpHands.HandLandmark.WRIST, 
+    # mpHands.HandLandmark.THUMB_CMC, 
+    # mpHands.HandLandmark.THUMB_MCP,
+    # mpHands.HandLandmark.THUMB_IP, 
+    # mpHands.HandLandmark.THUMB_TIP, 
+    # mpHands.HandLandmark.INDEX_FINGER_MCP,
+    # mpHands.HandLandmark.INDEX_FINGER_DIP, 
+    # mpHands.HandLandmark.INDEX_FINGER_PIP, 
+    # mpHands.HandLandmark.INDEX_FINGER_TIP,
+    # mpHands.HandLandmark.MIDDLE_FINGER_MCP,
+    # mpHands.HandLandmark.MIDDLE_FINGER_DIP, 
+    # mpHands.HandLandmark.MIDDLE_FINGER_PIP, 
+    # mpHands.HandLandmark.MIDDLE_FINGER_TIP, 
+    # mpHands.HandLandmark.RING_FINGER_MCP, 
+    # mpHands.HandLandmark.RING_FINGER_DIP,
+    # mpHands.HandLandmark.RING_FINGER_PIP, 
+    # mpHands.HandLandmark.RING_FINGER_TIP, 
+    # mpHands.HandLandmark.PINKY_MCP,
+    # mpHands.HandLandmark.PINKY_DIP, 
+    # mpHands.HandLandmark.PINKY_PIP, 
+    # mpHands.HandLandmark.PINKY_TIP
+    # ]
 
-    for lm in lm_list : 
-        lms = hand_lms.landmark[lm]
-        output_lms.append(lms.x)
-        output_lms.append(lms.y)
-        output_lms.append(lms.z)
+    # for lm in lm_list : 
+    #     lms = hand_lms.landmark[lm]
+    #     output_lms.append(lms.x)
+    #     output_lms.append(lms.y)
+    #     output_lms.append(lms.z)
 
-    return output_lms
+    # return output_lms
 
 def checkColor(hand_landmarks,image_shape,prior,color_num):
 
@@ -97,5 +97,4 @@ def checkColor(hand_landmarks,image_shape,prior,color_num):
     if prior == curr_result:
         return color_num,"dont_change" 
 
-    print("CHANGED")
     return color_num+1,"change"

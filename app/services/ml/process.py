@@ -44,7 +44,6 @@ class Process:
                                                                                     pen_color, pen_size, mpHands, hands,
                                                                                     mp_draw)
 
-          print("pen_color : ", pen_color)
           for position in range(len(circles)):
             pen_color = circles[position][1]
             frame = cv2.circle(frame, circles[position][0], pen_size, pen_color, -2)
