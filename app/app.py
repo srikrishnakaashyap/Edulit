@@ -34,6 +34,7 @@ with app.app_context():
   RegisterBlueprints(app, db)
   socketio = SocketIO(app, cors_allowed_origins='*')
   import sockets.join_room
+  import sockets.send_message
   socketio.run(app, host="0.0.0.0", port=5000, debug=True)
 
 

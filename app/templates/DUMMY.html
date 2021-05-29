@@ -982,7 +982,7 @@
             </button>
           </div>
 
-          <form action="sendMessage()" class="chat-form">
+          <form id="message_form" class="chat-form">
             <input id="chat-viewbox-text-input" type="text" class="chat-input" placeholder="Enter your message">
             <button type="submit"> Send </button>
           </form>
@@ -1027,42 +1027,53 @@
   </div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
 
     const socket = io.connect("http://0.0.0.0:5000");
     socket.on('connect', () => {
 
-
-
-
-
         socket.emit('join_room', {
             username: "{{ username }}",
-            room: "{{ room }}"
+            room_id: "{{ room_id }}"
         })
 
+        let message_input = document.getElementById("chat-viewbox-text-input")
+
+        document.getElementById("message_form").onsubmit = function(e){
+
+            e.preventDefault();
+
+            let message = message_input.value.trim();
+
+            if(message){
+
+                socket.emit('send_message' , {
+                    username: "{{ username }}",
+                    room_id: "{{ room_id }}",
+                    message: message
+                })
+
+            }
+
+            message_input.value = "";
+            message_input.focus();
+        }
 
 
+    });
 
+    socket.on('receive_message', function(data){
+
+        console.log(data);
+    });
+
+    socket.on('join_room_announcement', function(data){
+
+        console.log(data);
     })
 
-
-    function sendMessage(){
-
-        let message = document.getElementById("chat-viewbox-text-input")
-
-
-
-        socket.emit('send_message' , {
-
-            username: "{{ username }}",
-            room_id: "{{ room_id }}",
-
-
-        })
-
-
-    }
 
 
 
