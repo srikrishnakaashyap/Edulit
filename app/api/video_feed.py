@@ -7,16 +7,13 @@ from services.ml.process import Process
 
 video_feed_blueprint = Blueprint('video_feed', __name__, template_folder="templates")
 
-@video_feed_blueprint.route('/video_feed_home')
-def video_feed_home():
-
-  print("INSIDE VIDEO FEED")
-  return render_template("room.html")
-
-
 @video_feed_blueprint.route('/video_feed')
+@login_required
 def video_feed():
-  return Response(Process.gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+  room_id = request.args.get("room_id")
+
+  return Response(Process.gen_frames(room_id), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 

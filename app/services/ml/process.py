@@ -8,7 +8,7 @@ import mediapipe as mp
 class Process:
 
   @classmethod
-  def gen_frames(cls):
+  def gen_frames(cls, room_id=None):
     camera = cv2.VideoCapture(0)
     circles = []
     prior, color_num = "dont_change", 0
@@ -46,5 +46,7 @@ class Process:
 
           ret, buffer = cv2.imencode('.jpg', frame)
           frame = buffer.tobytes()
+
+          SocketService.broadcastToRoom(frame, room_id)
           yield (b'--frame\r\n'
                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
