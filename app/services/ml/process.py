@@ -45,10 +45,7 @@ class Process:
 
           ret, buffer = cv2.imencode('.jpg', frame)
           frame = buffer.tobytes()
-# <<<<<<< HEAD
-#
 #           SocketService.broadcast(frame, room_id)
-# =======
-# >>>>>>> parent of fb5e97c (render image in student dashboard)
+
           yield (b'--frame\r\n'
                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
