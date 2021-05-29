@@ -1,4 +1,7 @@
-from app_socket import socketio
+try:
+    from __main__ import socketio
+except ImportError:
+    from app import socketio, app
 
 class SocketService:
 

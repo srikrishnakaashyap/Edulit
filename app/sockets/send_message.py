@@ -1,5 +1,7 @@
-from app_socket import socketio
-
+try:
+    from __main__ import socketio
+except ImportError:
+    from app import socketio, app
 
 @socketio.on('send_message')
 def handle_send_message_event(data):

@@ -1,17 +1,13 @@
-from flask import Response
-
 import cv2
-from services.ml.draw_vid import mediapipe_results
 import mediapipe as mp
 
-from services.socket_service import SocketService
-from sockets import send_message
+from services.ml.draw_vid import mediapipe_results
 
 
 class Process:
 
   @classmethod
-  def gen_frames(cls, room_id=None):
+  def gen_frames(cls):
     camera = cv2.VideoCapture(0)
     circles = []
     prior, color_num = "dont_change", 0
@@ -49,7 +45,10 @@ class Process:
 
           ret, buffer = cv2.imencode('.jpg', frame)
           frame = buffer.tobytes()
-
-          SocketService.broadcast(frame, room_id)
+# <<<<<<< HEAD
+#
+#           SocketService.broadcast(frame, room_id)
+# =======
+# >>>>>>> parent of fb5e97c (render image in student dashboard)
           yield (b'--frame\r\n'
                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')

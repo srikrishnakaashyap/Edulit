@@ -646,27 +646,26 @@
 
         return parent_div;
     }
-
-
-
+    // <img src="{{ url_for('video_feed.video_feed') }}" width="100%">
     window.addEventListener('load', function () {
       console.log("{{role}}")
         var output= document.getElementById("output");
         var img;
-        let room_id = "{{ room_id }}"
         if("{{role}}"==6){
           img = document.createElement("img");
-          img.src= "{{ url_for('video_feed.video_feed', room_id=room_id) }}";
+          img.src= "{{ url_for('video_feed.video_feed') }}";
           img.setAttribute('width', '100%')
           output.appendChild(img); 
         }
         else if("{{role}}"==10){
           img = document.createElement("img");
           img.src = "../static/img/demo/boxed-layout.jpg";
-          img.setAttribute('id', 'display_image')
           img.setAttribute('width', '100%')
           output.appendChild(img);
         }
+
+
+        
       })
 </script>
 
