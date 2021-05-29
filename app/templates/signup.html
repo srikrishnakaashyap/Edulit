@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HackOn</title>
+  <title>HackOn Register</title>
   <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
   <meta name="author" content="Vincent Garreau" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" media="screen" href="../static/css/style.css">
   <script src="../static/js/app.js"></script>
 </head>
@@ -13,35 +16,60 @@
   <!-- <a id="mlh-trust-badge" 
   style="display:block;max-width:100px;min-width:60px;position:fixed;right:30px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/2021/events?utm_source=apac-hackathon&amp;utm_medium=TrustBadge&amp;utm_campaign=2021-season&amp;utm_content=white" target="_blank" rel="noopener noreferrer"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" alt="Major League Hacking 2021 Hackathon Season" style="width:100%"></a> -->
   <div class="root">
-    <div class="login-box">
-      <div class="login-box-formbox">
-        <div class="login-box-signup">
+    <div class="signup-box">
+      <div class="signup-box-formbox">
+        <div class="signup-box-signup">
          <!-- <p> Want to know how I made this?
               <a href="">
                 Read the Blog
               </a></p> -->
         </div>
-        <div class="login-box-login">
-          <h1> Welcome to HackOn</h1>
+        <div class="signup-box-login">
+          <h1> Sign Up</h1>
           <p>
             <!-- <i> A real time collaborative teaching session</i> -->
 
           </p>
           <br>
       <!-- form here!!! -->
-      <form action="#">
+      <form id="signup" action="/signup" method="POST">
         <div>
-          <label for="username"> Username </label>
+          <label for="first_name"> First Name </label>
           <input 
           type="text"
-          name ="username"
+          name ="first_name"
+          autocomplete="off"
+          value=""
+          placeholder="Enter your first name"
+          class="input-firstname"
+          />
+          
+        </div>
+        <div>
+          <label for="last_name"> Last Name </label>
+          <input 
+          type="text"
+          name ="last_name"
+          autocomplete="off"
+          value=""
+          placeholder="Enter your last name"
+          
+          />
+          
+        </div>
+
+        <div>
+          <label for="email"> Email Address </label>
+          <input
+          type="text"
+          name ="email"
           autocomplete="off"
           value=""
           placeholder="Enter your email"
           class="input-email"
           />
-          
         </div>
+
         <div>
           <label for="password"> Password </label>
           <input 
@@ -54,50 +82,39 @@
           />
           
         </div>
-        <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="button">
+
+        <div>
+          <p>Please select a role:</p>
+              <select name="role" class="form-control" id="role">
+                <option value="6" >Teacher</option>
+                <option value="10" >Student</option>
+              </select>
+        </div>
+        <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="submit">
           <span class="MuiButton-label">
-            Login</span>
+            Register</span>
             <span class="MuiTouchRipple-root"></span></button></div>
         
     </form>
-      <div class="alternate-text"> 
-        Or Log in with
-      </div>
-  
-      <div class="alternate-boxes">
-          <button onclick="" variant="outlined" color="inherit"
-            class="alternate-box" >
-            <img src="../static/img/google.svg" alt="googleLogo" />
-        </button>
-        <button onclick="" variant="outlined" color="inherit"
-            class="alternate-box" >
-            <img src="../static/img/github.png" alt="githubLogo" width="28px" height="28px" />
-        </button>
-        <button onclick="" variant="outlined" color="inherit"
-            class="alternate-box" >
-            <img src="../static/img/twitter.png" alt="twitterLogo" width="24px" height="24px" />
-        </button>
-      </div>
-      </div>
-  </div>
-  <div class="login-box-quotebox">
-    <div class="quote-container">
-      <!-- <div class="quote">Learn better!</div> -->
-      <div class="quote-small">
-        <!-- 'whatever' -->
-      </div>
-    </div>
-  </div>
-  </div>
-  
+      
+ </div>
+ </div>
+ </div>
 
 
 <!-- particles.js container -->
 <div id="particles-js"></div>
 
 <!-- scripts -->
-<script src="../particles.min.js"></script>
+<script src="../static/js/particles.min.js"></script>
 <script src="../static/js/app.js"></script>
+
+<script>
+
+    if({{ message }} ){
+        alert({{ message }})
+    }
+</script>
 
 
 

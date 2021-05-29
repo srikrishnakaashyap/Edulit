@@ -216,7 +216,7 @@ body, html {
   height: 100%;
   width: 100%;
   margin: 0;
-  /* padding: 2.5em; */
+  padding: 2.5em;
   background-color: #232741;
 }
 
@@ -312,6 +312,89 @@ p {
   width: 100%;
   flex-shrink: 0;
 }
+
+/* Sign up */
+
+.signup-box {
+  /* background: #e0e0e0; */
+  opacity: 0.85;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  position: absolute;
+  display: flex;
+  
+  border-radius: 20px;
+  /* background-color: #ffffff; */
+  background-color: #1a1d1e;
+  background-color: rgb(23, 25, 26);
+
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 20px 20px 60px #232741, -20px -20px 60px #232741; */
+}
+
+.signup-box-formbox,
+.signup-box-quotebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 100%;
+  padding: 4em 6em;
+}
+
+@media only screen and (max-width: 1100px) {
+  .signup-box-quotebox {
+    display: none;
+  }
+}
+
+.signup-box-quotebox {
+  color: white;
+  background-color: #2028eb;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="%235257f0" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 17.6l-2 -1.1v-2.5"></path><path d="M4 10v-2.5l2 -1.1"></path><path d="M10 4.1l2 -1.1l2 1.1"></path><path d="M18 6.4l2 1.1v2.5"></path><path d="M20 14v2.5l-2 1.12"></path><path d="M14 19.9l-2 1.1l-2 -1.1"></path><line x1="12" y1="12" x2="14" y2="10.9"></line><line x1="18" y1="8.6" x2="20" y2="7.5"></line><line x1="12" y1="12" x2="12" y2="14.5"></line><line x1="12" y1="18.5" x2="12" y2="21"></line><path d="M12 12l-2 -1.12"></path><line x1="6" y1="8.6" x2="4" y2="7.5"></line></svg>'),
+    linear-gradient(
+      to right top,
+      #0f1396,
+      #202199,
+      #2d2d9c,
+      #38389f,
+      #4243a1,
+      #4243a1,
+      #4142a0,
+      #4142a0,
+      #36379d,
+      #2b2b99,
+      #1d1e95,
+      #0a0f90
+    );
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.signup-box-signup a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  text-decoration: inherit;
+}
+.signup-box-signup a:hover,
+.signup-box-signup a:focus {
+  color: #a0a4e3;
+}
+
+.signup-box-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-grow: 1;
+}
+.signup-box-login > * {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* End Signup */
 
 form > div {
   position: relative;
@@ -595,3 +678,153 @@ html {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+body
+{
+  background-color:#f2f2f2;
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+.center
+{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Non-Essential  */
+
+.property-card
+{
+  height:18em;
+  width:14em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image
+{
+  height:18em;
+}
+
+.property-card:hover .property-social-icons
+{
+  background-color:white;
+}
+
+.property-card:hover .property-social-icons:hover
+{
+  background-color:blue;
+  cursor:pointer;
+}
+
+
+/* Optional
+
+.property-image-title
+{
+text-align:center;
+position:Relative;
+top:30%;
+opacity:0;
+transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+color:black;
+font-size:1.2em;
+}
+
+.property-card:hover .property-image-title
+{
+opacity:1;
+}
+
+*/

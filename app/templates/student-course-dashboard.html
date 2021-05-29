@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Student Dashboard</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../static/vendors/feather/feather.css">
+  <link rel="stylesheet" href="../static/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../static/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="../static/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="../static/js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../static/img/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html">Student</a>
+        <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a> -->
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div> -->
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              {{ first_name }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a href="logout" class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+         
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" >
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Courses</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="student-course-dashboard.html">View All Courses</a></li>
+              </ul>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="machinelearning.html">Machine Learning</a></li>
+              </ul>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="se.html">Software Engg.</a></li>
+              </ul>
+            
+           
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="a.html">Astronomy</a></li>
+              </ul>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="psy.html">Psychology</a></li>
+              </ul>
+             
+              
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Attendance</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Attendance</a></li>
+              </ul>
+            </div>
+          </li>
+          
+          
+      
+        </ul>
+      </nav>
+
+      <!-- END SIDE BAR -->
+
+     
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="center">
+                <div class="property-card">
+                  <a href="machinelearning.html">
+                    <div class="property-image-ml">
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5> Machine Learning </h5>
+                    <br>
+                    <p>A branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="center">
+                <div class="property-card">
+                  <a href="machinelearning.html">
+                    <div class="property-image-se">
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5> Software Engineering </h5>
+                    <br>
+                    <p>Software engineering is a branch of computer science which includes the development and building of computer systems software.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="center">
+                <div class="property-card">
+                  <a href="">
+                    <div class="property-image-dl" >
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5> Deep Learning </h5>
+                    <br>
+                    <p>Deep learning is a subset of machine learning in artificial intelligence that has networks capable of learning unsupervised from data that is unstructured or unlabeled.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="center">
+                <div class="property-card">
+                  <a href="machinelearning.html">
+                    <div class="property-image-a">
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5> Astronomy</h5>
+                    
+                    <br>
+                    <p>Astronomy is the study of everything in the universe beyond Earth's atmosphere.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="property-card">
+                  <a href="">
+                    <div class="property-image-psy" >
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5> Psychology </h5>
+                    <br>
+                    <p>Psychology is the scientific study of the mind and behavior, according to the American Psychological Association.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="property-card">
+                  <a href="">
+                    <div class="property-image-ims" >
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5>IMS</h5>
+                    <br>
+                    <p>A management information system is an information system used for decision-making, and for the coordinatio information.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="property-card">
+                  <a href="">
+                    <div class="property-image-cn" >
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5> Computer Networks </h5>
+                    <br>
+                    <p>A computer network is a group of computers that use a set of common communication protocols over digital interconnections</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="center">
+                <div class="property-card">
+                  <a href="">
+                    <div class="property-image-os" >
+                      <div class="property-image-title">
+                      </div>
+                    </div></a>
+                  <div class="property-description">
+                    <br>
+                    <h5>Operating Systems </h5>
+                    <br>
+                    <p>An operating system (OS) is system software that manages computer hardware, software resources.</p>
+                  </div>
+                  <a href="machinelearning.html">
+                    <div class="property-social-icons">
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+                
+                           
+                </div>
+                
+           
+                </div>
+        </div>
+            </div>
+         
+          
+          </div>
+        </div>
+      <!-- partial -->
+      
+            
+                
+              
+              
+                       
+          
+            
+          
+                 <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <!-- <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021<a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span> -->
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Team soHigh <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+
+
+
+
+
+  <style>
+    body
+{
+  background-color:#f2f2f2;
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+.center
+{
+  height:50vh;
+  width:40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Non-Essential  */
+
+.property-card
+{
+  height:18em;
+  width:14em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image-ml
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://florencefennel.co.in/image/cache/catalog/florencefennel/Machine--Learning-1000x1000.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.property-image-se
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://ieeecs-media.computer.org/wp-media/2019/03/01030033/psem_logo.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image-dl
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://assets.website-files.com/5fb24a974499e90dae242d98/5fb24a974499e96f7b2431db_AI%20venn%20diagram.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image-a
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://www.amnh.org/content/download/307016/4841835/file/1006650247-still.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.property-image-psy
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://online.csp.edu/wp-content/uploads/2018/07/Basic-Psychology-FB.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image-ims
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/cloud_database_shutterstock_fullvector.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image-cn
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://bournetocode.com/projects/GCSE_Computing_Fundamentals/pages/img/computer-network.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image-psy
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://online.csp.edu/wp-content/uploads/2018/07/Basic-Psychology-FB.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-image-os
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://www.howtogeek.com/wp-content/uploads/2018/08/img_5b68e80f77e33.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+
+
+
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image-se
+{
+  height:18em;
+}
+.property-card:hover .property-image-ml
+{
+  height:18em;
+}
+.property-card:hover .property-image-dl
+{
+  height:18em;
+}
+.property-card:hover .property-image-psy
+{
+  height:18em;
+}
+.property-card:hover .property-image-ims
+{
+  height:18em;
+}
+.property-card:hover .property-image-cn
+{
+  height:18em;
+}
+.property-card:hover .property-image-a
+{
+  height:18em;
+}
+.property-card:hover .property-image-os
+{
+  height: 18em;
+}
+
+.property-card:hover .property-social-icons
+{
+  background-color:white;
+}
+
+.property-card:hover .property-social-icons:hover
+{
+  background-color:rgb(181, 209, 183);
+  cursor:pointer;
+}
+
+
+/* Optional
+
+.property-image-title
+{
+text-align:center;
+position:Relative;
+top:30%;
+opacity:0;
+transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+color:black;
+font-size:1.2em;
+}
+
+.property-card:hover .property-image-title
+{
+opacity:1;
+}
+
+*/
+  </style>
+  <!-- plugins:js -->
+  <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../static/vendors/chart.js/Chart.min.js"></script>
+  <script src="../static/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../static/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../static/js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../static/js/off-canvas.js"></script>
+  <script src="../static/js/hoverable-collapse.js"></script>
+  <script src="../static/js/template.js"></script>
+  <script src="../static/js/settings.js"></script>
+  <script src="../static/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../static/js/dashboard.js"></script>
+  <script src="../static/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

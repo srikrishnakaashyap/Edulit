@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HackOn</title>
+  <title>HackOn Login</title>
   <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
   <meta name="author" content="Vincent Garreau" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -29,12 +29,12 @@
           </p>
           <br>
       <!-- form here!!! -->
-      <form action="#">
+      <form action="/login" method="POST">
         <div>
-          <label for="username"> Username </label>
+          <label for="email"> Username </label>
           <input 
           type="text"
-          name ="username"
+          name ="email"
           autocomplete="off"
           value=""
           placeholder="Enter your email"
@@ -54,14 +54,17 @@
           />
           
         </div>
-        <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="button">
+        
+        
+        <label><input id="remember" name="remember" value="True" type="checkbox" /> Remember me</label> 
+        <div><button class="btn MuiButtonBase-root MuiButton-root MuiButton-text login_btn__2G3B-" tabindex="0" type="submit">
           <span class="MuiButton-label">
             Login</span>
             <span class="MuiTouchRipple-root"></span></button></div>
         
     </form>
       <div class="alternate-text"> 
-        Or Log in with
+        <a href="signup" style="text-align: left; color: white;"><h3>Sign Up</h3></a>&nbsp; Or Log in with
       </div>
   
       <div class="alternate-boxes">
@@ -82,9 +85,9 @@
   </div>
   <div class="login-box-quotebox">
     <div class="quote-container">
-      <div class="quote">Learn better!</div>
+      <div class="quote">Learn</div>
       <div class="quote-small">
-        'whatever'
+        A platform for better education!
       </div>
     </div>
   </div>
