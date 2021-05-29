@@ -1,6 +1,7 @@
+from api.create_room import create_room_blueprint
 from api.home import home_blueprint
 from api.logout import logout_blueprint
-from api.room import room_blueprint
+from api.join_room import room_blueprint
 from api.login import login_blueprint
 from api.signup import signup_blueprint
 from api.verify_email import verify_blueprint
@@ -16,3 +17,4 @@ class RegisterBlueprints:
     app.register_blueprint(signup_blueprint)
     app.register_blueprint(logout_blueprint)
     app.register_blueprint(verify_blueprint)
+    app.register_blueprint(create_room_blueprint)

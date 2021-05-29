@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Welcome to the room {{ room }} </h1>
+    <h1>Welcome {{ username }} to the room {{ room_id }} </h1>
 	
     <div id="messages"></div>
 
-    <form>
-        <input type="text" placeholder="Enter your message here">
+    <form id = "message_input_form">
+        <input id="message_input" type="text" placeholder="Enter your message here">
         <button type="submit">Send</button>
     </form>
 </body>
@@ -18,13 +18,25 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 
-    const socket = io.connect("http://0.0.0.0:5000");
-    socket.on('connect', () => {
-        socket.emit('join_room', {
-            username: "{{ username }}",
-            room: "{{ room }}"
-        })
-    })
+
+
+
+        let message_input = document.getElementById('message_input');
+
+        document.getElementById('message_input_form').onsubmit = function (e) {
+
+            e.preventDefault();
+
+            let message = message_input.value.trim();
+
+            if(message.length) {
+
+
+            }
+        }
+    });
+
+
 
     socket.on('join_room_announcement', function(data){
 

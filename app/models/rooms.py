@@ -15,17 +15,17 @@ class Room(db.Model):
   attendees = db.Column(db.PickleType())
   notes = db.Column(db.JSON())
   is_live = db.Column(db.Boolean)
-  teacher_id = db.Column(db.Integer, db.ForeignKey(User.id, ondelete="CASCADE"), nullable=False)
-  teacher = db.relationship('User', backref=db.backref('rooms', lazy='dynamic'))
+  created_by = db.Column(db.Integer, db.ForeignKey(User.id, ondelete="CASCADE"), nullable=False)
+  user = db.relationship('User', backref=db.backref('rooms', lazy='dynamic'))
 
   def __init__(self, kwargs):
     self.name = kwargs.get('name')
-    self.attendees = kwargs.get('description')
-    self.teacher_id = kwargs.get('teacher_id')
+    self.is_live = kwargs.get('is_live')
+    self.created_by = kwargs.get('created_by')
 
   @classmethod
   def getAll(cls):
-    return Course.query.all()
+    return Room.query.all()
 
 
 

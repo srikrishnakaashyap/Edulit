@@ -13,9 +13,9 @@ class Course(db.Model):
   id = db.Column(db.Integer, primary_key=True, autoincrement=True)
   name = db.Column(db.String(100))
   description = db.Column(db.String(255))
-  teacher_id = db.Column(db.Integer, db.ForeignKey(User.id, ondelete="CASCADE"), nullable=False)
+  created_by = db.Column(db.Integer, db.ForeignKey(User.id, ondelete="CASCADE"), nullable=False)
 
-  teacher = db.relationship('User', backref=db.backref('courses', lazy='dynamic'))
+  user = db.relationship('User', backref=db.backref('courses', lazy='dynamic'))
 
   # verified = db.Column(db.Boolean, default=False)
 
