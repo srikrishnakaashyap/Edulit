@@ -2,7 +2,7 @@ import cv2
 import time
 import mediapipe as mp 
 import numpy as np
-from detectActions import *
+from services.ml.detectActions import *
 
 ## Video feed loop
 # while True : 
