@@ -684,7 +684,7 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 72px 240px 1fr 240px;
-      grid-template-columns: 72px 170px 1fr 350px;
+      grid-template-columns: 72px 240px 1fr 340px;
   -ms-grid-rows: 48px calc(100vh - 48px);
       grid-template-rows: 48px calc(100vh - 48px);
   font-size: 100%;
@@ -2047,6 +2047,8 @@ body {
   padding: 8px;
   padding-right: 4px;
   border-radius: 8px;
+
+    margin-left: 12px;
 }
 
 .chat-text-input .chat-form {
@@ -2143,7 +2145,7 @@ body {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: inherit;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2164,8 +2166,6 @@ body {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left:16px;
-  padding: 10%;
   justify-self: flex-end;
 }
 
@@ -2200,14 +2200,15 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+
+    justify-content: flex-start;
   color: #fff;
   width: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
-  padding-right: 48px;
+  padding-right: 18px;
+
+
 }
 
 .message-container .message-item .message-options {
@@ -2230,6 +2231,7 @@ body {
   top: -5px;
   right: 0;
   visibility: hidden;
+  padding: 15px 30px 20px 40px;
 }
 
 .message-container .message-item .message-options .btn {
@@ -2336,7 +2338,8 @@ body {
 }
 
 .message-container .message-sender {
-  margin-right: 16px;
+  margin-right: 10px;
+  margin-left: 25px;
 }
 
 .message-container > .message-item:nth-child(2) .timestamp-date {
