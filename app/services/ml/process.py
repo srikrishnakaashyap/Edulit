@@ -8,10 +8,6 @@ import mediapipe as mp
 class Process:
 
   @classmethod
-  def video_feed(cls):
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-  @classmethod
   def gen_frames(cls):
     camera = cv2.VideoCapture(0)
     circles = []
