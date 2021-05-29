@@ -7,6 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Teacher Dashboard</title>
   <!-- plugins:css -->
+
+
+  <link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+  <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+  <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="../static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+  <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="../static/css/util.css">
+      <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+
+
   <link rel="stylesheet" href="../static/vendors/feather/feather.css">
   <link rel="stylesheet" href="../static/vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
@@ -51,7 +67,48 @@
               <i class="icon-bell mx-0"></i>
               <span class="count"></span>
             </a>
-
+            <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div> -->
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
@@ -112,7 +169,7 @@
           </li>
         </ul>
         <div class="tab-content" id="setting-content">
-
+ 
         </div>
       </div>
       <!-- partial -->
@@ -134,23 +191,8 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="teacher-course-dashboard.html">View All Courses</a></li>
+                <li class="nav-item"> <a class="nav-link" href="teacher-course-dashboard.html">Courses</a></li>
               </ul>
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="machinelearning.html">Machine Learning</a></li>
-              </ul>
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="se.html">Software Engg.</a></li>
-              </ul>
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="a.html">Astronomy</a></li>
-              </ul>
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="psy.html">Psychology</a></li>
-                <!-- <transition name="fade"></transition> -->
-              </ul>
-              
-              
             </div>
           </li>
           <li class="nav-item">
@@ -177,7 +219,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Welcome {{ first_name }}</h3>
+                  <h1>Welcome to <b>Machine Learning</b> </h1>
                     </div>
                     
                 <div class="col-12 col-xl-4">
@@ -201,7 +243,7 @@
                             <div class="modal-body">
                               <div class="form-group">
                                 <label for="room">Room Name</label>
-                                <input type="text" class="form-control" id="room" aria-describedby="room" placeholder="Enter Room Name">                                
+                                <input type="text" class="form-control" id="room" aria-describedby="room" style="border: 1px solid #CED4DA;"  placeholder="Enter Room Name">                                
                               </div>
                               <div class="form-group">
                                 <label for="password1">Password</label>
@@ -224,43 +266,54 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card tale-bg">
-                <div class="card-people mt-auto">
-                  <img src="../static/img/dashboard/people.svg" alt="people">
-                  <div class="weather-info">
-                    <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                      </div>
-                      <div class="ml-2">
-                      </div>
+          <h3>Access Previous Sessions</h3>
+                <div class="wrap-table100">
+                    <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">Room Name</th>
+                                        <th class="cell100 column2">Class ID</th>
+                                        <th class="cell100 column3">Date</th>
+                                        <th class="cell100 column3">Access</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+    
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">Like a butterfly</td>
+                                        <td class="cell100 column2">Boxing</td>
+                                        <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                        <td class="cell100 column4"><button type="button" class="btn btn-outline-primary btn-round mr-md-3 mb-md-0 mb-2" data-toggle="modal" data-target="#form">Review</button></td>
+                                    </tr>
+    
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">Mind & Body</td>
+                                        <td class="cell100 column2">Yoga</td>
+                                        <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                        <td class="cell100 column4"><button type="button" class="btn btn-outline-primary btn-round mr-md-3 mb-md-0 mb-2" data-toggle="modal" data-target="#form">Review</button></td>
+                                    </tr>
+    
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">Crit Cardio</td>
+                                        <td class="cell100 column2">Gym</td>
+                                        <td class="cell100 column3">9:00 AM - 10:00 AM</td>
+                                        <td class="cell100 column4"><button type="button" class="btn btn-outline-primary btn-round mr-md-3 mb-md-0 mb-2" data-toggle="modal" data-target="#form">Review</button></td>
+                                    </tr>
+    
+                                   
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 grid-margin transparent">
-              <div class="card">
-								<div class="card-body">
-									<h4 class="card-title">To Do Lists</h4>
-									<div class="list-wrapper pt-2">
-										<ul class="d-flex flex-column-reverse todo-list todo-list-custom">
-											
-											
-											
-											
-											
-										</ul>
-                  </div>
+         
                   
-                  <div class="add-items d-flex mb-0 mt-2">
-										<input type="text" class="form-control todo-list-input"  placeholder="Add new task">
-                    <br>
-										<button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button>
-									</div>
-								</div>
+                  
 							</div>
                 
               
