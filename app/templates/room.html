@@ -322,7 +322,7 @@
           </div>
 
           <div class="user-settings">
-            <div class="btn-container" data-tooltip-top="Logout">
+            <div class="btn-container" data-tooltip-top="dashboard">
               <a href="/"><button class="btn btn-hover round" href="LOGOUT">
                 <svg class="btn-icon btn-icon-sm" xmlns="http://www.w3.org/2000/svg" aria-hidden="false" width="20"
                   height="20" viewBox="0 0 24 24">
@@ -643,7 +643,7 @@
           var img = document.createElement("img");
           img.src= "{{ url_for('video_feed.video_feed') }}";
           img.width="100%" ;
-          
+
           console.log(img)
           output.appendChild(img); 
         }
