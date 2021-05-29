@@ -36,6 +36,6 @@ with app.app_context():
   # socketio.init_app()
   import sockets.join_room
   import sockets.send_message
-  socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+  socketio.run(app, host="0.0.0.0", port=8080, debug=True)
 
 
