@@ -4,6 +4,9 @@ import cv2
 from services.ml.draw_vid import mediapipe_results
 import mediapipe as mp
 
+from services.socket_service import SocketService
+from sockets import send_message
+
 
 class Process:
 
@@ -47,6 +50,6 @@ class Process:
           ret, buffer = cv2.imencode('.jpg', frame)
           frame = buffer.tobytes()
 
-          SocketService.broadcastToRoom(frame, room_id)
+          # send_message.broadcast(frame, room_id)
           yield (b'--frame\r\n'
                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')

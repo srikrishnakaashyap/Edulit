@@ -1,5 +1,4 @@
 from flask_login import LoginManager
-from flask_socketio import SocketIO
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
@@ -8,6 +7,7 @@ from flask_migrate import Migrate
 
 from database import db
 from initializers.register_all_blueprints import RegisterBlueprints
+from app_socket import socketio
 
 app = Flask(__name__)
 
@@ -32,7 +32,7 @@ with app.app_context():
 
   cors = CORS(app)
   RegisterBlueprints(app, db)
-  socketio = SocketIO(app, cors_allowed_origins='*')
+  socketio.init_app(app, cors_allowed_origins='*')
   import sockets.join_room
   import sockets.send_message
   socketio.run(app, host="0.0.0.0", port=5000, debug=True)

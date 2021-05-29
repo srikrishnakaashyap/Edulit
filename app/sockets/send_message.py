@@ -1,7 +1,4 @@
-try:
-    from __main__ import socketio
-except ImportError:
-    from app import socketio, app
+from app_socket import socketio
 
 
 @socketio.on('send_message')
@@ -14,3 +11,5 @@ def handle_send_message_event(data):
   socketio.emit('receive_message', data, room=data['room_id'])
 
   print("SENT")
+
+
