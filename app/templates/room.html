@@ -639,19 +639,17 @@
     window.addEventListener('load', function () {
       console.log("{{role}}")
         var output= document.getElementById("output");
+        var img;
         if("{{role}}"==6){
-          var img = document.createElement("img");
+          img = document.createElement("img");
           img.src= "{{ url_for('video_feed.video_feed') }}";
-          img.width="100%" ;
-          
-          console.log(img)
+          img.setAttribute('width', '100%')
           output.appendChild(img); 
         }
         else if("{{role}}"==10){
-          var img = document.createElement("img");
-          img.src= "../static/img/demo/boxed-layout.jpg";
-          img.width="100%" ;
-          console.log(img)
+          img = document.createElement("img");
+          img.src = "../static/img/demo/boxed-layout.jpg";
+          img.setAttribute('width', '100%')
           output.appendChild(img);
         }
 
