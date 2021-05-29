@@ -17,7 +17,7 @@ def join_room():
 
 
   if room_id:
-    return render_template('room.html', room_id=room_id, username=username, room_name=room.name, created_by=created_by)
+    return render_template('room.html', room_id=room_id, username=username, role=current_user.role, room_name=room.name, created_by=created_by)
   else:
     return redirect(url_for('home.home'))
 

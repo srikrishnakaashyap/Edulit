@@ -420,8 +420,8 @@
     <main class="chat-viewbox">
         <div class="container">
           <div class="row" style="padding: 20px;">
-              <div class="col-lg-8  offset-lg-2">
-                  <img src="{{ url_for('video_feed.video_feed') }}" width="100%">
+              <div id="output" class="col-lg-8  offset-lg-2">
+                  
               </div>
             </div>
           </div>
@@ -628,14 +628,36 @@
         message_div.append(message);
 
 
-        {#parent_div.appendChild(first_span);#}
+        // {#parent_div.appendChild(first_span);#}
         parent_div.appendChild(message_sender_div);
         parent_div.appendChild(message_div);
 
 
         return parent_div;
     }
+    // <img src="{{ url_for('video_feed.video_feed') }}" width="100%">
+    window.addEventListener('load', function () {
+      console.log("{{role}}")
+        var output= document.getElementById("output");
+        if("{{role}}"==6){
+          var img = document.createElement("img");
+          img.src= "{{ url_for('video_feed.video_feed') }}";
+          img.width="100%" ;
+          
+          console.log(img)
+          output.appendChild(img); 
+        }
+        else if("{{role}}"==10){
+          var img = document.createElement("img");
+          img.src= "../static/img/demo/boxed-layout.jpg";
+          img.width="100%" ;
+          console.log(img)
+          output.appendChild(img);
+        }
 
+
+        
+      })
 </script>
 
 </html>
