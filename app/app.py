@@ -36,10 +36,10 @@ with app.app_context():
   RegisterBlueprints(app, db)
   sockets = SocketIO(app, cors_allowed_origins='*')
   # socketio.init_app()
-  import sockets.join_room
-  import sockets.send_message
+  import socketfiles.join_room
+  import socketfiles.send_message
 
-  # port = int(os.environ.get("PORT", 5000))
-  # socketio.run(app, port=port, debug=True)
+  port = int(os.environ.get("PORT", 5000))
+  sockets.run(app, port=port, debug=True)
 
 
