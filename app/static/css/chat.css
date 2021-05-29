@@ -684,7 +684,7 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 72px 240px 1fr 240px;
-      grid-template-columns: 72px 240px 1fr 240px;
+      grid-template-columns: 72px 170px 1fr 350px;
   -ms-grid-rows: 48px calc(100vh - 48px);
       grid-template-rows: 48px calc(100vh - 48px);
   font-size: 100%;
@@ -2143,7 +2143,7 @@ body {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: inherit;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2164,6 +2164,8 @@ body {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left:16px;
+  padding: 10%;
   justify-self: flex-end;
 }
 
