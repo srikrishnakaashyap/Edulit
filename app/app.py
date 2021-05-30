@@ -34,12 +34,12 @@ with app.app_context():
 
   cors = CORS(app)
   RegisterBlueprints(app, db)
-  sockets = SocketIO(app, cors_allowed_origins='*')
+  socketio = SocketIO(app, cors_allowed_origins='*')
   # socketio.init_app()
   import socketfiles.join_room
   import socketfiles.send_message
 
   port = int(os.environ.get("PORT", 5000))
-  sockets.run()
+  socketio.run(app)
 
 
