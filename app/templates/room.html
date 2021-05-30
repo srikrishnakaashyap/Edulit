@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no">
-  <title>Guidelines</title>
-  <link rel="shortcut icon" href="../static/icons/favicon.ico" type="image/x-icon">
+  <title>eduLit</title>
+  <link rel="shortcut icon" href="../static/icons/" type="image/x-icon">
   <link href="../static/fonts/whitney/font-whitney.css" rel="stylesheet">
   <link rel="stylesheet" href="../static/css/chat.css">
 </head>
@@ -227,7 +227,7 @@
       <header class="server-header">
         <div class="server-profile">
           <a href="#!" class="server-title">
-            <h3 class="server-name">"Course Name" ✨</h3>
+            <h3 class="server-name">HackOn 2.0 ✨</h3>
           </a>
           <button class="btn btn-sm">
 
@@ -265,20 +265,12 @@
           <div class="room-member-details">
 
             <div class="room-member-name">
-              <span class="member-username">"Student name"</span>
+              <span class="member-username">{{username}}</span>
 
             </div>
           </div>
         </li>
 
-        <li class="room-member-item green">
-          <div class="room-member-details">
-
-            <div class="room-member-name">
-              <span class="member-username">"Student name"</span>
-            </div>
-          </div>
-        </li>
       </ul>
 
       <section class="channel">
@@ -309,14 +301,14 @@
           <div class="user-profile">
             <div class="user-profile-image">
               <div class="icon-profile icon-profile-hover ">
-                <img class="icon-status-mask full-img" src="../static/img/profile/profile.jpg" alt="Name">
+                <img class="icon-status-mask full-img" src="../static/img/faces/face6.jpg" alt="Name">
               </div>
               <div class="badge-online"></div>
             </div>
 
             <div data-tooltip-top-delay="Click to copy username">
               <div class="user-account">
-                <span class="user-username">"Enter Username"</span>
+                <span class="user-username">{{username}}</span>
               </div>
             </div>
           </div>
@@ -345,12 +337,12 @@
       <div class="header-room-info">
 
 
-        <h3 class="room-title">"Room Name"</h3>
+        <h3 class="room-title">Room {{room_id}}</h3>
 
         <div class="seperator-vrt"></div>
 
         <div class="room-description">
-          Welcome back to "course name"
+          Welcome back to 
         </div>
       </div>
 
