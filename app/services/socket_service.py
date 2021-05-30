@@ -8,5 +8,5 @@ class SocketService:
   @classmethod
   def broadcast(cls, frame, room_id):
     
-    print("FRAME", frame)
+    # print("FRAME", frame)
     sockets.emit('send_frame', frame, room=room_id)
