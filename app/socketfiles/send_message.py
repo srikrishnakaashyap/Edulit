@@ -1,16 +1,16 @@
 try:
-    from __main__ import sockets
+    from __main__ import socketio
 except ImportError:
-    from app import sockets, app
+    from app import socketio, app
 
-@sockets.on('send_message')
+@socketio.on('send_message')
 def handle_send_message_event(data):
 
   print("{} has sent the message to the room {} : {}".format(data['username'],
                                                              data['room_id'],
                                                              data['message']))
 
-  sockets.emit('receive_message', data, room=data['room_id'])
+  socketio.emit('receive_message', data, room=data['room_id'])
 
   print("SENT")
 

@@ -1,7 +1,7 @@
 try:
-    from __main__ import sockets
+    from __main__ import socketio
 except ImportError:
-    from app import sockets, app
+    from app import socketio, app
 
 class SocketService:
 
@@ -9,4 +9,4 @@ class SocketService:
   def broadcast(cls, frame, room_id):
     
     # print("FRAME", frame)
-    sockets.emit('send_frame', frame, room=room_id)
+    socketio.emit('send_frame', frame, room=room_id)
