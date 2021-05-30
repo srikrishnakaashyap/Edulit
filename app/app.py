@@ -40,6 +40,6 @@ with app.app_context():
   import socketfiles.send_message
 
   port = int(os.environ.get("PORT", 5000))
-  sockets.run(app, port=port, debug=True)
+  sockets.run()
 
 
