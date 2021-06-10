@@ -11,7 +11,7 @@ def join_room():
   room_id = request.args.get('room_id')
   username = current_user.first_name
 
-  room = Room.query.get(room_id)
+  room = Room.query.filter(Room.room_id == room_id).first()
 
   created_by = room.user.first_name
 
@@ -20,4 +20,6 @@ def join_room():
     return render_template('room.html', room_id=room_id, username=username, role=current_user.role, room_name=room.name, created_by=created_by)
   else:
     return redirect(url_for('home.home'))
+
+
 
