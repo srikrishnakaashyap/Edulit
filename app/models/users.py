@@ -31,6 +31,9 @@ class User(UserMixin, db.Model):
   def getAll(cls):
     return User.query.all()
 
+  def __repr__(self):
+    return "{}, {}, {}".format(self.first_name, self.last_name, self.email)
+
   @classmethod
   def isVerified(cls, user_id):
     user = User.query.get(user_id)
