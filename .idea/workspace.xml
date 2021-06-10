@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6c7ebed-f3b7-4d1c-b2ec-d46a142000d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/create_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/create_room.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/join_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/join_room.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/get_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/get_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/signup.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/signup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/constants/app_constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/app_constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/initializers/register_all_blueprints.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/initializers/register_all_blueprints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/rooms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/initializers/setup_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/initializers/setup_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/email_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/email_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
       <updated>1623249831772</updated>
       <workItem from="1623249832932" duration="2362000" />
       <workItem from="1623298378103" duration="2352000" />
-      <workItem from="1623311502145" duration="478000" />
+      <workItem from="1623311502145" duration="3594000" />
     </task>
     <servers />
   </component>

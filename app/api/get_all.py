@@ -4,6 +4,7 @@ from flask import Blueprint, request
 
 from constants.app_constants import GC
 from models.rooms import Room
+from models.users import User
 
 get_all_blueprint = Blueprint('get_all', __name__, template_folder="templates")
 
@@ -21,8 +22,12 @@ def get_all():
     if get:
 
       if get == "rooms":
-        data = Room.query.all()
+        data = Room.getAll()
 
+        print(data)
+
+      if get == "users":
+        data = User.getAll()
         print(data)
 
       return "Fetched {} rows from {}".format(len(data), get)
