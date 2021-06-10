@@ -12,6 +12,7 @@ class Room(db.Model):
 
   id = db.Column(db.Integer, primary_key=True, autoincrement=True)
   name = db.Column(db.String(100))
+  room_id = db.Column(db.String(10))
   attendees = db.Column(db.PickleType())
   notes = db.Column(db.JSON())
   is_live = db.Column(db.Boolean)
@@ -22,6 +23,10 @@ class Room(db.Model):
     self.name = kwargs.get('name')
     self.is_live = kwargs.get('is_live')
     self.created_by = kwargs.get('created_by')
+    self.room_id = kwargs.get('room_id')
+
+  def __repr__(self):
+    return "{}, {}, {}".format(self.id, self.room_id, self.name)
 
   @classmethod
   def getAll(cls):

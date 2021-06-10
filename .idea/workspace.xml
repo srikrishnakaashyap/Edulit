@@ -1,15 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6c7ebed-f3b7-4d1c-b2ec-d46a142000d4" name="Default Changelist" comment="" />
+    <list default="true" id="e6c7ebed-f3b7-4d1c-b2ec-d46a142000d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/create_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/create_room.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/join_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/join_room.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/app_constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/app_constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/initializers/register_all_blueprints.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/initializers/register_all_blueprints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/rooms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/rooms.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="691a3dfc-fd64-4693-a0a8-d8759c057225" />
+  <component name="ProjectId" id="1tiRGwrUyL6RWhWnjRwerOGHZNK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6c7ebed-f3b7-4d1c-b2ec-d46a142000d4" name="Default Changelist" comment="" />
+      <created>1623249831772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623249831772</updated>
+      <workItem from="1623249832932" duration="2362000" />
+      <workItem from="1623298378103" duration="2352000" />
+      <workItem from="1623311502145" duration="478000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="498" y="190" key="SettingsEditor" timestamp="1623261424917">
+      <screen x="73" y="23" width="1847" height="1057" />
+    </state>
+    <state x="498" y="190" key="SettingsEditor/73.23.1847.1057@73.23.1847.1057" timestamp="1623261424917" />
+    <state x="697" y="306" width="598" height="490" key="find.popup" timestamp="1623309936829">
+      <screen x="73" y="23" width="1847" height="1057" />
+    </state>
+    <state x="697" y="306" width="598" height="490" key="find.popup/73.23.1847.1057@73.23.1847.1057" timestamp="1623309936829" />
+    <state x="661" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1623260803752">
+      <screen x="73" y="23" width="1847" height="1057" />
+    </state>
+    <state x="661" y="258" width="670" height="676" key="search.everywhere.popup/73.23.1847.1057@73.23.1847.1057" timestamp="1623260803752" />
   </component>
 </project>

@@ -1,5 +1,7 @@
 from api.courses import courses_blueprint
 from api.create_room import create_room_blueprint
+from api.delete import delete_blueprint
+from api.get_all import get_all_blueprint
 from api.home import home_blueprint
 from api.logout import logout_blueprint
 from api.join_room import room_blueprint
@@ -22,3 +24,5 @@ class RegisterBlueprints:
     app.register_blueprint(create_room_blueprint)
     app.register_blueprint(video_feed_blueprint)
     app.register_blueprint(courses_blueprint)
+    app.register_blueprint(delete_blueprint)
+    app.register_blueprint(get_all_blueprint)

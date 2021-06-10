@@ -6,6 +6,7 @@ from constants.app_constants import GC
 from database import db
 from models.rooms import Room
 from services._ import _
+from services.create_room_service import CreateRoomService
 
 create_room_blueprint = Blueprint('create_room', __name__, template_folder="templates")
 
@@ -17,25 +18,28 @@ def create_room():
   if room_name == None:
     room_name = _.get_current_time()
 
-
   userId = current_user.id
+
+  room_id = CreateRoomService.get_room_id()
 
   data = {
     "name": room_name,
     "created_by": userId,
-    "is_live": True
+    "is_live": True,
+    "room_id": room_id
   }
   room = Room(data)
 
   try:
     db.session.add(room)
-    db.session.flush()
-  except exc.SQLAlchemyError as e:
-    db.session.rollback()
-
-  if room.id:
     db.session.commit()
-    return redirect("/join?room_id={}".format(room.id))
+    return redirect("/join?room_id={}".format(room_id))
+  except exc.SQLAlchemyError as e:
+    print(e)
+    db.session.rollback()
+    return redirect("home.home")
+
+
 
 
 
