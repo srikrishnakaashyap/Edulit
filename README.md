@@ -34,7 +34,7 @@ This project needs python installed. Please install any python version between(3
    ```
 2. Create a virtual environment in the app using the command
    ```
-   virtualenv venv
+   python3 -m virtualenv venv
    ```
 3. Activate the virtual environment using:
    ```
